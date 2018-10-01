@@ -63,37 +63,45 @@ function buildTable(){
   /include logic to make the text bold when the player is a senior.
   Write the loop here*/
   for(i = 0; i < players.length; i++){
-      html += '<tr><td>'+ players[i][0]'</td>'
-            + '<td>'+ players[i][1]'</td>'
-            + '<td>'+ players[i][2]'/td>'
-            + '<td>'+ players[i][3]'</td></tr>'
+      html += '<tr><td>'+ players[i]'</td>'
+            + '<td>'+ players[i]'</td>'
+            + '<td>'+ players[i]'</td>'
+            + '<td>'+ players[i]'</td>';
+            html +='</tr>'
 
       if (players[i][3] == 'Senior'){
         elt.style.cssText = "color: blue; border: 1px solid black";
       }
       return html;
     }
+
+    /* for(i=0, i<array.players; i++){
+        var tr = table.insertRow();
+
+        for(j=0, j<4; j++){
+          var td = tr.insertCell();
+        }
+
+      }*/
+
+      /*Now, outside of the for loop, but still inside the entire buildTable function,
+       use the tableContent and html variables to display the results in the empty tableArea */
+
+
+
+
   }
 
-var h = "<!DOCTYPE html><html><head><title>Exercise 5: Build an HTML Table with JS</title><link rel='stylesheet' href='css/styles.css' type='text/css' /></head><body><h2>Springfield High School 2018 Girls Basketball Team</h2><table id='table-content'>"
+buildTable ();
+
+/*var h = "<!DOCTYPE html><html><head><title>Exercise 5: Build an HTML Table with JS</title><link rel='stylesheet' href='css/styles.css' type='text/css' /></head><body><h2>Springfield High School 2018 Girls Basketball Team</h2><table id='table-content'>"
 
 var b = buildTable();
 
 var f = "</table><script src='js/scripts.js'></script></body></html>"
 
-document.body.innerHTML = h + b + f;
+document.body.innerHTML = h + b + f;*/
 
-/*Now write a for loop to populate the table using the data
-  /include logic to make the text bold when the player is a senior.
-  Write the loop here*/
-  for(i=0, i<array.players; i++){
-    var tr = table.insertRow();
-
-    for(j=0, j<4; j++){
-      var td = tr.insertCell();
-    }
-
-  }
 
 
 /*
