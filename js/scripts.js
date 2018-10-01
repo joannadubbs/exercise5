@@ -62,20 +62,7 @@ function buildTable(){
   /*Now write a for loop to populate the table using the data
   /include logic to make the text bold when the player is a senior.
   Write the loop here*/
-
-  for (i=0, i<7; i++){
-    for(j=0, j<4; j++){
-      table.rows[i].cells[j].innerHTML = players[i][j];
-    }
-  }
-  if (players[i][3] == 'Senior'){
-    elt.style.cssText = "color: black;"
-  }
-}
-
-buildTable();
-
-  /*for(i = 0; i < players.length; i++){
+  for(i = 0; i < players.length; i++){
       html += '<tr><td>'+ players[i][0]'</td>'
             + '<td>'+ players[i][1]'</td>'
             + '<td>'+ players[i][2]'/td>'
@@ -94,7 +81,7 @@ var b = buildTable();
 
 var f = "</table><script src='js/scripts.js'></script></body></html>"
 
-document.body.innerHTML = h + b + f;*/
+document.body.innerHTML = h + b + f;
 
 /*Now write a for loop to populate the table using the data
   /include logic to make the text bold when the player is a senior.
