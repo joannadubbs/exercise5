@@ -49,7 +49,7 @@ var players = [
 ];
 
 //initialize a variable for the HTML content you're going to build
-var html = 'table';
+var html = '';
 var i, j;
 //get the empty table content area
 var tableContent = document.getElementById('table-content');
@@ -62,7 +62,31 @@ function buildTable(){
   /*Now write a for loop to populate the table using the data
   /include logic to make the text bold when the player is a senior.
   Write the loop here*/
-  for(i=0, i<6; i++){
+  for(i = 0; i < players.length; i++){
+      html += '<tr><td>'+ players[i][0]'</td>'
+            + '<td>'+ players[i][1]'</td>'
+            + '<td>'+ players[i][2]'/td>'
+            + '<td>'+ players[i][3]'</td></tr>'
+
+      if (players[i][3] == 'Senior'){
+        elt.style.cssText = "color: blue; border: 1px solid black";
+      }
+      return html;
+    }
+  }
+
+var h = "<!DOCTYPE html><html><head><title>Exercise 5: Build an HTML Table with JS</title><link rel='stylesheet' href='css/styles.css' type='text/css' /></head><body><h2>Springfield High School 2018 Girls Basketball Team</h2><table id='table-content'>"
+
+var b = buildTable();
+
+var f = "</table><script src='js/scripts.js'></script></body></html>"
+
+document.body.innerHTML = h + b + f;
+
+/*Now write a for loop to populate the table using the data
+  /include logic to make the text bold when the player is a senior.
+  Write the loop here*/
+  for(i=0, i<array.players; i++){
     var tr = table.insertRow();
 
     for(j=0, j<4; j++){
@@ -70,16 +94,8 @@ function buildTable(){
     }
 
   }
-}
 
-html;
 
-function makeBold (){
-  if (year == 'Senior'){
-
-  }
-
-}
 /*
 EXTRA CREDIT CHALLENGE (5 POINTS): Write a function that compares the list above with the list below, finds the players that made the All-State team, and displays a message with the results: "Congratulations to Springfield's 2018 North Carolina All-State honorees: ____." Display the message in a div below the table.
 Hint: You need two loops, one of which will be 'nested'.*/
