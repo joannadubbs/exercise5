@@ -68,7 +68,7 @@ function buildTable(){
       table.rows[i].cells[j].innerHTML = players[i][j];
     }
   }
-  if (year == 'Senior'){
+  if (players[i][3] == 'Senior'){
     elt.style.cssText = "color: black;"
   }
 }
